@@ -6,11 +6,7 @@ Scroll the screen and when the specified element
 - When the specified element enters the screen, the `active` class is added.
 - When the element goes out of the screen, the `active` class is removed.
 
-[comment]: <> (画面をスクロールし、指定した要素が)
-
-[comment]: <> (- 画面内に入ると`active`クラスを付与  )
-
-[comment]: <> (- 画面外になると`active` クラスを削除)
+![scroll-toggle-active-class](https://user-images.githubusercontent.com/41136135/236067205-c24c9387-0a69-4fb0-b3bc-b7d429c655a6.gif)
 
 ## Demo
 
@@ -19,31 +15,10 @@ Make sure the active class is assigned.
 
 ## CDN
 
-[comment]: <> (Using npm:)
-
-[comment]: <> (```bash)
-
-[comment]: <> (npm i @kiyotd/scroll-toggle-active-class)
-
-[comment]: <> (```)
-
-[comment]: <> (Using yarn:)
-
-[comment]: <> (```bash)
-
-[comment]: <> (yarn add @kiyotd/scroll-toggle-active-class)
-
-[comment]: <> (```)
-
-[comment]: <> (Using CDN:)
-
+### v1.0.12
 ```shell
-<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@latest/main.js"></script>
-```
-
-[comment]: <> (## Documentation)
-
-[comment]: <> ([docs]&#40;https://kiyotd-scroll-toggle-active-class.vercel.app/&#41;)
+<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.0.12/main.js"></script>
+````
 
 ## Examples
 
