@@ -53,7 +53,7 @@
   },
   "files": [
     "main.bundle.js",
-    "dist/index.d.ts",
+    "index.d.ts",
     "README.md",
     "LICENSE.md"
   ],
