@@ -1,6 +1,6 @@
 {
   "name": "@kiyotd/scroll-toggle-active-class",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "main": "./main.js",
   "description": "Utility",
   "license": "MIT",
