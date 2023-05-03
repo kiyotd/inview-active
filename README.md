@@ -6,9 +6,11 @@ Scroll the screen and when the specified element
 - When the specified element enters the screen, the `active` class is added.
 - When the element goes out of the screen, the `active` class is removed.
 
-画面をスクロールし、指定した要素が
-- 画面内に入ると`active`クラスを付与  
-- 画面外になると`active` クラスを削除
+[comment]: <> (画面をスクロールし、指定した要素が)
+
+[comment]: <> (- 画面内に入ると`active`クラスを付与  )
+
+[comment]: <> (- 画面外になると`active` クラスを削除)
 
 ## CDN
 
