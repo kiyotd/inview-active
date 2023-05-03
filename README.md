@@ -14,7 +14,7 @@ Scroll the screen and when the specified element
 
 ## Demo
 
-[Demo](http://docs.kiyotd.com/scroll-toggle-active-class/demo/)  
+[Demo](https://docs.kiyotd.com/scroll-toggle-active-class/demo/)  
 Make sure the active class is assigned.
 
 ## CDN
