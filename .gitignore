@@ -3,3 +3,4 @@ memo
 dist/*.html
 *.tgz
 *.d.ts
+main.js
