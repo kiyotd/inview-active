@@ -12,6 +12,11 @@ Scroll the screen and when the specified element
 
 [comment]: <> (- 画面外になると`active` クラスを削除)
 
+## Demo
+
+[Demo](http://docs.kiyotd.com/scroll-toggle-active-class/demo/)  
+Make sure the active class is assigned.
+
 ## CDN
 
 [comment]: <> (Using npm:)
