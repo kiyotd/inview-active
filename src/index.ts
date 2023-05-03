@@ -22,7 +22,7 @@ export type OptionsType = {
  * </script>
  */
 export class ScrollToggleActiveClass {
-  options: OptionsType;
+  private options: OptionsType;
 
   constructor(options: OptionsType) {
     this.options = options;
@@ -34,7 +34,7 @@ export class ScrollToggleActiveClass {
     this.init();
   }
 
-  init() {
+  private init() {
 
     const observer: IntersectionObserver = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry: IntersectionObserverEntry) => {
