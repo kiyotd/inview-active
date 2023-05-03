@@ -1,7 +1,7 @@
 {
   "name": "@kiyotd/scroll-toggle-active-class",
   "version": "1.0.6",
-  "main": "main.bundle.js",
+  "main": "./dist/main.js",
   "description": "Utility",
   "license": "MIT",
   "private": false,
@@ -31,7 +31,6 @@
     "@types/eslint": "^8.37.0",
     "@types/eslint-plugin-prettier": "^3.1.0",
     "@types/jest": "^29.5.1",
-    "@types/node": "^18.16.0",
     "@types/prettier": "^2.7.2",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
     "@typescript-eslint/parser": "^5.59.0",
@@ -52,8 +51,8 @@
     "webpack-cli": "^5.0.2"
   },
   "files": [
-    "main.bundle.js",
-    "index.d.ts",
+    "dist/main.js",
+    "dist/**/*.d.ts",
     "README.md",
     "LICENSE.md"
   ],

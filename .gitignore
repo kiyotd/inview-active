@@ -2,4 +2,3 @@ node_modules
 memo
 dist/*.html
 *.tgz
-index.d.ts

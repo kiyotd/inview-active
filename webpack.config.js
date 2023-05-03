@@ -13,8 +13,8 @@ module.exports = {
     rules: [{test: /\.ts$/, loader: 'ts-loader'}]
   },
   output: {
-    filename: 'main.bundle.js',
-    path: path.resolve(__dirname, "./"),
+    filename: 'main.js',
+    path: path.resolve(__dirname, "./dist/"),
     library: 'kiyotd/scroll-toggle-active-class',
     libraryTarget: 'umd',
     globalObject: 'typeof self !== "undefined" ? self : this'
