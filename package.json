@@ -1,0 +1,57 @@
+{
+  "name": "@kiyotd/scroll-toggle-active-class",
+  "version": "0.1.0",
+  "main": "dist/main.js",
+  "description": "Utility",
+  "license": "MIT",
+  "private": false,
+  "author": {
+    "name": "kiyotd",
+    "email": "torigoedesign+kiyotd@gmail.com",
+    "url": "https://twitter.com/_kiyotd"
+  },
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiyotd/scroll-toggle-active-class.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kiyotd/scroll-toggle-active-class/issues"
+  },
+  "scripts": {
+    "test": "jest",
+    "coverage": "jest --coverage",
+    "dev": "npx webpack --watch --mode development --config webpack.config.js",
+    "build": "npx webpack --mode production --config webpack.config.js",
+    "pack": "npm pack && yarn pack",
+    "publish": "npm publish"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/eslint": "^8.37.0",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/jest": "^29.5.1",
+    "@types/node": "^18.16.0",
+    "@types/prettier": "^2.7.2",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "@typescript-eslint/typescript-estree": "^5.59.0",
+    "babel-eslint": "^10.1.0",
+    "browser-sync": "^2.29.1",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.8",
+    "ts-jest": "^29.1.0",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.80.0",
+    "webpack-cli": "^5.0.2"
+  },
+  "volta": {
+    "node": "18.16.0"
+  }
+}
