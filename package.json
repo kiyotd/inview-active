@@ -1,7 +1,7 @@
 {
   "name": "@kiyotd/scroll-toggle-active-class",
   "version": "1.0.3",
-  "main": "dist/main.js",
+  "main": "main.bundle.js",
   "description": "Utility",
   "license": "MIT",
   "private": false,
@@ -52,7 +52,7 @@
     "webpack-cli": "^5.0.2"
   },
   "files": [
-    "dist/main.js",
+    "main.bundle.js",
     "dist/index.d.ts",
     "README.md",
     "LICENSE.md"
