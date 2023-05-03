@@ -6,7 +6,7 @@ Scroll the screen and when the specified element
 - When the specified element enters the screen, the `active` class is added.
 - When the element goes out of the screen, the `active` class is removed.
 
-![scroll-toggle-active-class](https://user-images.githubusercontent.com/41136135/236067205-c24c9387-0a69-4fb0-b3bc-b7d429c655a6.gif)
+<video controls src="https://user-images.githubusercontent.com/41136135/236068882-596be7ce-b542-4ec2-9a62-83636b7f3200.mp4" width="100%"></video>
 
 ## Demo
 
