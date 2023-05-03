@@ -23,7 +23,7 @@
     "coverage": "jest --coverage",
     "dev": "npx webpack --watch --mode development --config webpack.config.js",
     "build": "npx webpack --mode production --config webpack.config.js",
-    "pack": "npm pack && yarn pack",
+    "pack": "npm pack",
     "publish": "npm publish"
   },
   "dependencies": {},
@@ -51,6 +51,12 @@
     "webpack": "^5.80.0",
     "webpack-cli": "^5.0.2"
   },
+  "files": [
+    "dist/main.js",
+    "dist/index.d.ts",
+    "README.md",
+    "LICENSE.md"
+  ],
   "volta": {
     "node": "18.16.0"
   }
