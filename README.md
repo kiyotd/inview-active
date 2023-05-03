@@ -33,7 +33,7 @@ Scroll the screen and when the specified element
 [comment]: <> (Using CDN:)
 
 ```shell
-<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@latest/dist/index.js"></script>
+<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@latest/dist/main.js"></script>
 ```
 
 [comment]: <> (## Documentation)
