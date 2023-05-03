@@ -21,7 +21,7 @@ export type OptionsType = {
  * });
  * </script>
  */
-class ScrollToggleActiveClass {
+export class ScrollToggleActiveClass {
   options: OptionsType;
 
   constructor(options: OptionsType) {
