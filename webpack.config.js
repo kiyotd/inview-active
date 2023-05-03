@@ -14,7 +14,7 @@ module.exports = {
   },
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, "./dist/"),
+    path: path.resolve(__dirname, "./"),
     library: 'kiyotd/scroll-toggle-active-class',
     libraryTarget: 'umd',
     globalObject: 'typeof self !== "undefined" ? self : this'
