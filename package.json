@@ -1,23 +1,32 @@
 {
   "name": "@kiyotd/scroll-toggle-active-class",
   "version": "1.0.12",
-  "main": "./main.js",
-  "description": "Utility",
+  "main": "main.js",
   "license": "MIT",
-  "private": false,
   "author": {
     "name": "kiyotd",
     "email": "torigoedesign+kiyotd@gmail.com",
     "url": "https://twitter.com/_kiyotd"
   },
-  "homepage": "",
+  "description": "Utility",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kiyotd/scroll-toggle-active-class.git"
   },
-  "bugs": {
-    "url": "https://github.com/kiyotd/scroll-toggle-active-class/issues"
+  "release": {
+    "branches": [
+      "main"
+    ]
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "main.js",
+    "**/*.d.ts",
+    "README.md",
+    "LICENSE.md"
+  ],
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
@@ -50,12 +59,6 @@
     "webpack": "^5.80.0",
     "webpack-cli": "^5.0.2"
   },
-  "files": [
-    "main.js",
-    "**/*.d.ts",
-    "README.md",
-    "LICENSE.md"
-  ],
   "volta": {
     "node": "18.16.0"
   }
