@@ -11,6 +11,8 @@ import { OptionsType } from "./types/OptionsType";
  *     selectors: ['.box1', '.box2'], // Array of selectors. required
  *     offset: 0, // Offset from the top of the screen. Default: 0
  *     activeClassName: 'active', // Class name to be given once inside the screen. Default: 'active'
+ *     inActive: true, // Add a class when it is outside the screen. Default: false
+ *     inActiveClassName: 'in-active', // Class name to be given once outside the screen. Default: 'in-active'
  *     once: true, // Off-screen does not remove class. Default: false
  *   });
  * });
@@ -24,6 +26,8 @@ export class ScrollToggleActiveClass {
     if (!this.options.selectors) throw new Error("targets is required.");
     if (!this.options.offset) this.options.offset = 0;
     if (!this.options.activeClassName) this.options.activeClassName = "active";
+    if (!this.options.inActive) this.options.inActive = false;
+    if (!this.options.inActiveClassName) this.options.inActiveClassName = "in-active";
     if (!this.options.once) this.options.once = false;
 
     this.init();
@@ -35,7 +39,13 @@ export class ScrollToggleActiveClass {
       entries.forEach((entry: IntersectionObserverEntry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add(this.options.activeClassName);
+          if (this.options.inActive) {
+            entry.target.classList.remove(this.options.inActiveClassName);
+          }
         } else {
+          if (this.options.inActive) {
+            entry.target.classList.add(this.options.inActiveClassName);
+          }
           if (!this.options.once) {
             entry.target.classList.remove(this.options.activeClassName);
           }
