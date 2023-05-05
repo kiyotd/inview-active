@@ -4,4 +4,4 @@ export {
   ScrollToggleActiveClass
 }
 
-// window.ScrollToggleActiveClass = ScrollToggleActiveClass;
+window.ScrollToggleActiveClass = ScrollToggleActiveClass;

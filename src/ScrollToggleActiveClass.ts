@@ -37,17 +37,25 @@ export class ScrollToggleActiveClass {
 
     const observer: IntersectionObserver = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry: IntersectionObserverEntry) => {
+        // 要素が領域に入った時
         if (entry.isIntersecting) {
           entry.target.classList.add(this.options.activeClassName);
           if (this.options.inActive) {
             entry.target.classList.remove(this.options.inActiveClassName);
           }
-        } else {
-          if (this.options.inActive) {
-            entry.target.classList.add(this.options.inActiveClassName);
-          }
+        } else { // 要素が領域から出た時
+
+          // once が false の場合、active クラスを外さない
           if (!this.options.once) {
             entry.target.classList.remove(this.options.activeClassName);
+          }
+
+          // inActive が true の場合
+          if (this.options.inActive) {
+            // かつ要素に `active` クラスがない場合は `in-active` を付与
+            if (!entry.target.classList.contains(this.options.activeClassName)) {
+              entry.target.classList.add(this.options.inActiveClassName);
+            }
           }
         }
       });
