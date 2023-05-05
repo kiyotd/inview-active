@@ -23,7 +23,7 @@
     "access": "public"
   },
   "files": [
-    "dist/index.js",
+    "dist/*.js",
     "**/*.d.ts",
     "README.md",
     "LICENSE.md"
