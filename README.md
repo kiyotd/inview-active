@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     activeClassName: 'active', // Class name to be given once inside the screen. Default: 'active'
     inActive: false, // Add a class when it is outside the screen. Default: false
     inActiveClassName: 'in-active', // Class name to be given once outside the screen. Default: 'in-active'
-    once: true, // Off-screen does not remove class. Default: false
+    once: false, // Off-screen does not remove class. Default: false
   });
 });
 </script>
