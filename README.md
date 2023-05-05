@@ -15,9 +15,9 @@ Make sure the active class is assigned.
 
 ## CDN
 
-### v1.0.12
+### v1.0.13
 ```shell
-<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.0.12/main.js"></script>
+<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.0.13/main.js"></script>
 ````
 
 ## Examples
