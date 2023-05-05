@@ -1,6 +1,6 @@
 node_modules
 memo
-dist/*.html
+dist
 *.tgz
 *.d.ts
 main.js

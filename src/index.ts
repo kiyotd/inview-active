@@ -1,5 +1,7 @@
 import { ScrollToggleActiveClass } from "./ScrollToggleActiveClass";
 
-export { ScrollToggleActiveClass };
+export {
+  ScrollToggleActiveClass
+}
 
-window.ScrollToggleActiveClass = ScrollToggleActiveClass;
+// window.ScrollToggleActiveClass = ScrollToggleActiveClass;

@@ -5,7 +5,7 @@ const mode = process.argv[process.argv.indexOf("--mode") + 1];
 
 module.exports = {
   mode: mode,
-  entry: './src/index.ts',
+  entry: './src/main.ts',
   resolve: {
     extensions: ['.ts', 'js']
   },

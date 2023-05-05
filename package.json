@@ -1,7 +1,8 @@
 {
   "name": "@kiyotd/scroll-toggle-active-class",
   "version": "1.0.14",
-  "main": "main.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "author": {
     "name": "kiyotd",
@@ -22,7 +23,7 @@
     "access": "public"
   },
   "files": [
-    "main.js",
+    "dist/index.js",
     "**/*.d.ts",
     "README.md",
     "LICENSE.md"
@@ -32,6 +33,7 @@
     "coverage": "jest --coverage",
     "dev": "npx webpack --watch --mode development --config webpack.config.js",
     "build": "npx webpack --mode production --config webpack.config.js",
+    "build:esbuild": "npx esbuild src/index.ts --target=esnext --format=cjs --bundle --minify --legal-comments=none --outfile=dist/index.js",
     "pack": "npm pack",
     "publish": "npm publish"
   },
@@ -46,6 +48,7 @@
     "babel-eslint": "^10.1.0",
     "browser-sync": "^2.29.1",
     "browser-sync-webpack-plugin": "^2.3.0",
+    "esbuild": "^0.17.18",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
