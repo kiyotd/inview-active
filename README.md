@@ -38,7 +38,7 @@ yarn add @kiyotd/scroll-toggle-active-class
 
 ## Examples
 
-### Node
+### in JavaScript
 
 ```javascript
 import {ScrollToggleActiveClass} from "@kiyotd/scroll-toggle-active-class";
