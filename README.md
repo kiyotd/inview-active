@@ -1,8 +1,9 @@
 # README
 
-This is a JavaScript utility.  
+This is a JavaScript utility.
 
 Scroll the screen and when the specified element
+
 - When the specified element enters the screen, the `active` class is added.
 - When the element goes out of the screen, the `active` class is removed.
 
@@ -13,27 +14,59 @@ Scroll the screen and when the specified element
 [Demo](https://docs.kiyotd.com/scroll-toggle-active-class/demo/)  
 Make sure the active class is assigned.
 
-## CDN
+## Installation
 
-### v1.0.20
+### npm
+
+```shell
+npm i @kiyotd/scroll-toggle-active-class
+```
+
+### yarn
+
+```shell
+yarn add @kiyotd/scroll-toggle-active-class
+```
+
+### CDN
+
+#### v1.0.20
+
 ```shell
 <script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.0.20/dist/main.js"></script>
 ````
 
 ## Examples
 
+### Node
+
+```javascript
+import {ScrollToggleActiveClass} from "@kiyotd/scroll-toggle-active-class";
+
+new ScrollToggleActiveClass({
+  selectors: ['.box1', '.box2'], // Array of selectors. required
+  offset: 0, // Offset from the top of the screen. Default: 0
+  activeClassName: 'active', // Class name to be given once inside the screen. Default: 'active'
+  inActive: false, // Add a class when it is outside the screen. Default: false
+  inActiveClassName: 'in-active', // Class name to be given once outside the screen. Default: 'in-active'
+  once: false, // Off-screen does not remove class. Default: false
+});
+```
+
+### CDN
+
 ```html
 <script>
-window.addEventListener('DOMContentLoaded', () => {
-  new ScrollToggleActiveClass({
-    selectors: ['.box1', '.box2'], // Array of selectors. required
-    offset: 0, // Offset from the top of the screen. Default: 0
-    activeClassName: 'active', // Class name to be given once inside the screen. Default: 'active'
-    inActive: false, // Add a class when it is outside the screen. Default: false
-    inActiveClassName: 'in-active', // Class name to be given once outside the screen. Default: 'in-active'
-    once: false, // Off-screen does not remove class. Default: false
+  window.addEventListener('DOMContentLoaded', () => {
+    new ScrollToggleActiveClass({
+      selectors: ['.box1', '.box2'], // Array of selectors. required
+      offset: 0, // Offset from the top of the screen. Default: 0
+      activeClassName: 'active', // Class name to be given once inside the screen. Default: 'active'
+      inActive: false, // Add a class when it is outside the screen. Default: false
+      inActiveClassName: 'in-active', // Class name to be given once outside the screen. Default: 'in-active'
+      once: false, // Off-screen does not remove class. Default: false
+    });
   });
-});
 </script>
 
 <div class="box1">1</div>
@@ -44,4 +77,33 @@ window.addEventListener('DOMContentLoaded', () => {
 <div class="box2">6</div>
 <div class="box2">7</div>
 <div class="box2">8</div>
+
+<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.0.20/dist/main.js"></script>
+</body>
 ```
+
+## Options
+
+### selectors
+`string[]`
+Array of selector strings. required.
+
+### offset
+`number`
+Offset from the top of the screen. Default: 0
+
+### activeClassName
+`string`
+Class name to be given once inside the screen. Default: 'active'
+
+### inActive
+`boolean`
+Add a class when it is outside the screen. Default: false
+
+### inActiveClassName
+`string`
+Class name to be given once outside the screen. Default: 'in-active'
+
+### once
+`boolean`
+Off-screen does not remove class. Default: false
