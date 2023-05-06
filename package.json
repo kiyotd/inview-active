@@ -1,7 +1,7 @@
 {
   "name": "@kiyotd/scroll-toggle-active-class",
   "version": "1.0.20",
-  "main": "dist/index.js",
+  "main": "dist/esm.min.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "author": {
@@ -36,8 +36,8 @@
     "dev:sync": "browser-sync start --server --baseDir './' --startPath '/demo/local.html' --files 'demo/*' 'dist/**/*' --port 3010",
     "build": "npm-run-all build:*",
     "build:clean": "del-cli dist/",
-    "build:browser": "npx esbuild src/index.ts --target=esnext --format=iife --bundle --minify --legal-comments=none --outfile=dist/main.js",
-    "build:esm": "npx esbuild src/index.ts --target=esnext --format=esm --bundle --minify --legal-comments=none --outfile=dist/index.js",
+    "build:browser": "node build/browser.mjs",
+    "build:esm": "node build/esm.mjs",
     "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir './dist'",
     "publish": "npm publish --access public"
   },

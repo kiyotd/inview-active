@@ -30,10 +30,10 @@ yarn add @kiyotd/scroll-toggle-active-class
 
 ### from CDN
 
-#### v1.0.20
+#### v1.0.21
 
 ```shell
-<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.0.20/dist/main.js"></script>
+<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.0.21/dist/browser.min.js"></script>
 ````
 
 ## Examples
@@ -78,7 +78,7 @@ new ScrollToggleActiveClass({
 <div class="box2">7</div>
 <div class="box2">8</div>
 
-<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.0.20/dist/main.js"></script>
+<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.0.21/dist/browser.min.js"></script>
 </body>
 ```
 
