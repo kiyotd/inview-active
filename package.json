@@ -23,20 +23,21 @@
     "access": "public"
   },
   "files": [
-    "dist/*.js",
-    "**/*.d.ts",
+    "dist",
     "README.md",
     "LICENSE.md"
   ],
   "scripts": {
     "test": "jest",
     "coverage": "jest --coverage",
-    "dev": "npx webpack --watch --mode development --config webpack.config.js",
+    "dev:browser": "npx esbuild src/index.ts --target=esnext --format=iife --bundle --outfile=dist/main.js --watch",
+    "dev:esm": "npx esbuild src/index.ts --target=esnext --format=esm --bundle --outfile=dist/index.js --watch",
     "build": "npm-run-all build:*",
-    "build:cjs": "npx esbuild src/index.ts --target=esnext --format=cjs --bundle --minify --legal-comments=none --outfile=dist/index.js",
-    "build:cdn": "npx esbuild src/index.ts --target=esnext --bundle --minify --legal-comments=none --outfile=dist/main.js",
-    "pack": "npm pack",
-    "publish": "npm publish"
+    "build:clean": "del-cli dist/",
+    "build:browser": "npx esbuild src/index.ts --target=esnext --format=iife --bundle --minify --legal-comments=none --outfile=dist/main.js",
+    "build:esm": "npx esbuild src/index.ts --target=esnext --format=esm --bundle --minify --legal-comments=none --outfile=dist/index.js",
+    "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir './dist'",
+    "publish": "npm publish --access public"
   },
   "dependencies": {},
   "devDependencies": {
@@ -49,6 +50,7 @@
     "babel-eslint": "^10.1.0",
     "browser-sync": "^2.29.1",
     "browser-sync-webpack-plugin": "^2.3.0",
+    "del-cli": "^5.0.0",
     "esbuild": "^0.17.18",
     "eslint": "^8.39.0",
     "eslint-config-prettier": "^8.8.0",

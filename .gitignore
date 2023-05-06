@@ -1,6 +1,5 @@
 node_modules
 memo
+demo
 dist
 *.tgz
-*.d.ts
-main.js
