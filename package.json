@@ -32,6 +32,7 @@
     "coverage": "jest --coverage",
     "dev": "run-p dev:*",
     "dev:browser": "npx esbuild src/index.ts --target=esnext --format=iife --bundle --outfile=dist/main.js --watch",
+    "dev:esm": "npx esbuild src/index.ts --target=esnext --format=esm --bundle --outfile=dist/index.js --watch",
     "dev:sync": "browser-sync start --server --baseDir './' --startPath '/demo/local.html' --files 'demo/*' 'dist/**/*' --port 3010",
     "build": "npm-run-all build:*",
     "build:clean": "del-cli dist/",
