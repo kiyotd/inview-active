@@ -33,15 +33,15 @@
     "lint": "eslint src/**/*.ts && tsc --noEmit",
     "prettier": "prettier --write src/**/*.ts",
     "dev": "run-p dev:*",
-    "dev:browser": "npx esbuild src/index.ts --target=esnext --format=iife --bundle --outfile=dist/main.js --watch",
-    "dev:esm": "npx esbuild src/index.ts --target=esnext --format=esm --bundle --outfile=dist/index.js --watch",
+    "dev:browser": "node esbuild/dev.browser.mjs",
+    "dev:esm": "node esbuild/dev.esm.mjs",
     "dev:sync": "browser-sync start --server --baseDir './' --startPath '/demo/local.html' --files 'demo/*' 'dist/**/*' --port 3010",
     "build": "npm-run-all build:*",
     "build:clean": "rimraf dist",
     "build:browser": "node esbuild/browser.mjs",
     "build:esm": "node esbuild/esm.mjs",
     "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir './dist'",
-    "publish": "npm publish --access public"
+    "publish": "npm run build && npm version patch && npm publish --tag latest && git push origin main && git push origin --tags"
   },
   "dependencies": {},
   "devDependencies": {
