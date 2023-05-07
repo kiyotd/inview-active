@@ -34,37 +34,39 @@ export class ScrollToggleActiveClass {
   }
 
   private init() {
+    const observer: IntersectionObserver = new IntersectionObserver(
+      (entries: IntersectionObserverEntry[]) => {
+        entries.forEach((entry: IntersectionObserverEntry) => {
+          // 要素が領域に入った時
+          if (entry.isIntersecting) {
+            entry.target.classList.add(this.options.activeClassName);
+            if (this.options.inActive) {
+              entry.target.classList.remove(this.options.inActiveClassName);
+            }
+          } else {
+            // 要素が領域から出た時
 
-    const observer: IntersectionObserver = new IntersectionObserver((entries: IntersectionObserverEntry[]) => {
-      entries.forEach((entry: IntersectionObserverEntry) => {
-        // 要素が領域に入った時
-        if (entry.isIntersecting) {
-          entry.target.classList.add(this.options.activeClassName);
-          if (this.options.inActive) {
-            entry.target.classList.remove(this.options.inActiveClassName);
-          }
-        } else { // 要素が領域から出た時
+            // once が false の場合、active クラスを外さない
+            if (!this.options.once) {
+              entry.target.classList.remove(this.options.activeClassName);
+            }
 
-          // once が false の場合、active クラスを外さない
-          if (!this.options.once) {
-            entry.target.classList.remove(this.options.activeClassName);
-          }
-
-          // inActive が true の場合
-          if (this.options.inActive) {
-            // かつ要素に `active` クラスがない場合は `in-active` を付与
-            if (!entry.target.classList.contains(this.options.activeClassName)) {
-              entry.target.classList.add(this.options.inActiveClassName);
+            // inActive が true の場合
+            if (this.options.inActive) {
+              // かつ要素に `active` クラスがない場合は `in-active` を付与
+              if (!entry.target.classList.contains(this.options.activeClassName)) {
+                entry.target.classList.add(this.options.inActiveClassName);
+              }
             }
           }
-        }
-      });
-    }, {
-      rootMargin: `-${this.options.offset}px 0px 0px 0px`,
-    });
+        });
+      },
+      {
+        rootMargin: `-${this.options.offset}px 0px 0px 0px`,
+      }
+    );
 
     this.options.selectors.map((selector: string) => {
-
       const targets: NodeListOf<Element> = document.querySelectorAll(selector);
 
       if (targets.length === 0) {
@@ -77,9 +79,6 @@ export class ScrollToggleActiveClass {
       targetsArr.forEach((target: Element) => {
         observer.observe(target);
       });
-
     });
-
   }
-
 }
