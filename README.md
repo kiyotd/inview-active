@@ -41,7 +41,7 @@ yarn add @kiyotd/scroll-toggle-active-class
 ### in JavaScript
 
 ```javascript
-import {ScrollToggleActiveClass} from "@kiyotd/scroll-toggle-active-class";
+import { ScrollToggleActiveClass } from "@kiyotd/scroll-toggle-active-class";
 
 new ScrollToggleActiveClass({
   selectors: ['.box1', '.box2'],
@@ -56,6 +56,7 @@ new ScrollToggleActiveClass({
 ### CDN
 
 ```html
+
 <script>
   window.addEventListener('DOMContentLoaded', () => {
     new ScrollToggleActiveClass({
@@ -85,25 +86,31 @@ new ScrollToggleActiveClass({
 ## Options
 
 ### selectors
+
 `string[]`
 Array of selector strings. required.
 
 ### offset
+
 `number`
 Offset from the top of the screen. Default: 0
 
 ### activeClassName
+
 `string`
 Class name to be given once inside the screen. Default: 'active'
 
 ### inActive
+
 `boolean`
 Add a class when it is outside the screen. Default: false
 
 ### inActiveClassName
+
 `string`
 Class name to be given once outside the screen. Default: 'in-active'
 
 ### once
+
 `boolean`
 Off-screen does not remove class. Default: false
