@@ -36,8 +36,8 @@
     "dev:sync": "browser-sync start --server --baseDir './' --startPath '/demo/local.html' --files 'demo/*' 'dist/**/*' --port 3010",
     "build": "npm-run-all build:*",
     "build:clean": "rimraf dist",
-    "build:browser": "node build/browser.mjs",
-    "build:esm": "node build/esm.mjs",
+    "build:browser": "node esbuild/browser.mjs",
+    "build:esm": "node esbuild/esm.mjs",
     "build:types": "tsc --declaration --emitDeclarationOnly --declarationDir './dist'",
     "publish": "npm publish --access public"
   },
