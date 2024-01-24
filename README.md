@@ -44,13 +44,20 @@ yarn add @kiyotd/scroll-toggle-active-class
 import { ScrollToggleActiveClass } from "@kiyotd/scroll-toggle-active-class";
 
 new ScrollToggleActiveClass({
-  selectors: ['.box1', '.box2'],
+  selectors: ['[data-active-target]', '.any-class-name'],
   offset: 0,
   activeClassName: 'active',
   inActive: false,
   inActiveClassName: 'in-active',
   once: false,
 });
+```
+
+```html
+<div data-active-target>Selector for any data attribute</div>
+<div data-active-target>Selector for any data attribute</div>
+<div data-active-target>Selector for any data attribute</div>
+<div class="any-class-name">Selector by class name</div>
 ```
 
 ### CDN
