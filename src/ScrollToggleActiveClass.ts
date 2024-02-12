@@ -24,7 +24,7 @@ export class ScrollToggleActiveClass {
   constructor(options: OptionsType) {
     this.options = options;
     if (!this.options.selectors) throw new Error("targets is required.");
-    if (!this.options.offset) this.options.offset = 0;
+    if (!this.options.rootMargin) this.options.rootMargin = "0px 0px 0px 0px";
     if (!this.options.activeClassName) this.options.activeClassName = "active";
     if (!this.options.inActive) this.options.inActive = false;
     if (!this.options.inActiveClassName) this.options.inActiveClassName = "in-active";
@@ -62,8 +62,8 @@ export class ScrollToggleActiveClass {
         });
       },
       {
-        rootMargin: `-${this.options.offset}px 0px 0px 0px`,
-      }
+        rootMargin: this.options.rootMargin,
+      },
     );
 
     this.options.selectors.map((selector: string) => {

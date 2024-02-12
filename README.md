@@ -30,10 +30,10 @@ yarn add @kiyotd/scroll-toggle-active-class
 
 ### from CDN
 
-#### v1.0.21
+#### v1.1.0
 
 ```shell
-<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.0.21/dist/browser.min.js"></script>
+<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.1.0/dist/browser.min.js"></script>
 ````
 
 ## Examples
@@ -45,7 +45,7 @@ import { ScrollToggleActiveClass } from "@kiyotd/scroll-toggle-active-class";
 
 new ScrollToggleActiveClass({
   selectors: ['[data-active-target]', '.any-class-name'],
-  offset: 0,
+  rootMargin: "0px 0px -200px 0px",
   activeClassName: 'active',
   inActive: false,
   inActiveClassName: 'in-active',
@@ -68,7 +68,7 @@ new ScrollToggleActiveClass({
   window.addEventListener('DOMContentLoaded', () => {
     new ScrollToggleActiveClass({
       selectors: ['.box1', '.box2'],
-      offset: 0,
+      rootMargin: "0px 0px -200px 0px",
       activeClassName: 'active',
       inActive: false,
       inActiveClassName: 'in-active',
@@ -86,7 +86,7 @@ new ScrollToggleActiveClass({
 <div class="box2">7</div>
 <div class="box2">8</div>
 
-<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.0.21/dist/browser.min.js"></script>
+<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.1.0/dist/browser.min.js"></script>
 </body>
 ```
 
@@ -97,10 +97,20 @@ new ScrollToggleActiveClass({
 `string[]`
 Array of selector strings. required.
 
-### offset
+[//]: # (### offset)
 
-`number`
-Offset from the top of the screen. Default: 0
+[//]: # ()
+[//]: # (`number`)
+
+[//]: # (Offset from the top of the screen. Default: 0)
+
+### rootMargin
+
+`string` The IntersectionObserver interface's read-only rootMargin property is a string with syntax similar to that of the CSS margin property. Each side of the rectangle represented by rootMargin is added to the corresponding side in the root element's bounding box before the intersection test is performed. This lets you, for example, adjust the bounds outward so that the target element is considered 100% visible even if a certain number of pixels worth of width or height is clipped away, or treat the target as partially hidden if an edge is too close to the edge of the root's bounding box.
+
+Default: '0px 0px 0px 0px'
+
+https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin
 
 ### activeClassName
 
