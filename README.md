@@ -7,7 +7,7 @@ Scroll the screen and when the specified element
 - When the specified element enters the screen, the `active` class is added.
 - When the element goes out of the screen, the `active` class is removed.
 
-https://github.com/kiyotd/scroll-toggle-active-class/assets/41136135/b2cc7097-abf9-44e5-a41d-e508953bfc2f
+https://github.com/kiyotd/scroll-toggle-active-class/assets/41136135/47041fb0-87df-4e32-9377-df68764ab84c
 
 ## Demo
 
