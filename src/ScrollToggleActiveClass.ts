@@ -9,7 +9,6 @@ import { OptionsType } from "./types/OptionsType";
  * window.addEventListener('DOMContentLoaded', () => {
  *   new ScrollToggleActiveClass({
  *     selectors: ['.box1', '.box2'], // Array of selectors. required
- *     offset: 0, // Offset from the top of the screen. Default: 0
  *     activeClassName: 'active', // Class name to be given once inside the screen. Default: 'active'
  *     inActive: true, // Add a class when it is outside the screen. Default: false
  *     inActiveClassName: 'in-active', // Class name to be given once outside the screen. Default: 'in-active'
