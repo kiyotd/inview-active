@@ -7,11 +7,11 @@ Scroll the screen and when the specified element
 - When the specified element enters the screen, the `active` class is added.
 - When the element goes out of the screen, the `active` class is removed.
 
-https://github.com/kiyotd/scroll-toggle-active-class/assets/41136135/47041fb0-87df-4e32-9377-df68764ab84c
+https://github.com/kiyotd/inview-active/assets/41136135/47041fb0-87df-4e32-9377-df68764ab84c
 
 ## Demo
 
-[Demo](https://docs.kiyotd.com/scroll-toggle-active-class/demo/)  
+[Demo](https://docs.kiyotd.com/inview-active/demo/)  
 Make sure the active class is assigned.
 
 ## Installation
@@ -19,13 +19,13 @@ Make sure the active class is assigned.
 ### Install from NPM
 
 ```shell
-npm i @kiyotd/scroll-toggle-active-class
+npm i @kiyotd/inview-active
 ```
 
 ### Install from Yarn
 
 ```shell
-yarn add @kiyotd/scroll-toggle-active-class
+yarn add @kiyotd/inview-active
 ```
 
 ### from CDN
@@ -33,7 +33,7 @@ yarn add @kiyotd/scroll-toggle-active-class
 #### v1.1.0
 
 ```shell
-<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.1.0/dist/browser.min.js"></script>
+<script src="https://unpkg.com/@kiyotd/inview-active@1.2.2/dist/browser.min.js"></script>
 ````
 
 ## Examples
@@ -41,7 +41,7 @@ yarn add @kiyotd/scroll-toggle-active-class
 ### in JavaScript
 
 ```javascript
-import { ScrollToggleActiveClass } from "@kiyotd/scroll-toggle-active-class";
+import { ScrollToggleActiveClass } from "@kiyotd/inview-active";
 
 new ScrollToggleActiveClass({
   selectors: ['[data-active-target]', '.any-class-name'],
@@ -86,7 +86,7 @@ new ScrollToggleActiveClass({
 <div class="box2">7</div>
 <div class="box2">8</div>
 
-<script src="https://unpkg.com/@kiyotd/scroll-toggle-active-class@1.1.0/dist/browser.min.js"></script>
+<script src="https://unpkg.com/@kiyotd/inview-active@1.2.2/dist/browser.min.js"></script>
 </body>
 ```
 
