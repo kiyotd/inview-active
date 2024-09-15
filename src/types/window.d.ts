@@ -1,7 +1,7 @@
-import { ScrollToggleActiveClass } from "../ScrollToggleActiveClass";
+import { InviewActive } from "../InviewActive";
 
 interface Window {
-  ScrollToggleActiveClass: typeof ScrollToggleActiveClass;
+  InviewActive: typeof InviewActive;
 }
 
 declare let window: Window;

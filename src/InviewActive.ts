@@ -7,7 +7,7 @@ import { OptionsType } from "./types/OptionsType";
  * // HTML
  * <script>
  * window.addEventListener('DOMContentLoaded', () => {
- *   new ScrollToggleActiveClass({
+ *   new InviewActive({
  *     selectors: ['.box1', '.box2'], // Array of selectors. required
  *     activeClassName: 'active', // Class name to be given once inside the screen. Default: 'active'
  *     inActive: true, // Add a class when it is outside the screen. Default: false
@@ -17,7 +17,7 @@ import { OptionsType } from "./types/OptionsType";
  * });
  * </script>
  */
-export class ScrollToggleActiveClass {
+export class InviewActive {
   private options: OptionsType;
 
   constructor(options: OptionsType) {

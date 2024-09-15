@@ -7,11 +7,9 @@ Scroll the screen and when the specified element
 - When the specified element enters the screen, the `active` class is added.
 - When the element goes out of the screen, the `active` class is removed.
 
-https://github.com/kiyotd/inview-active/assets/41136135/47041fb0-87df-4e32-9377-df68764ab84c
-
 ## Demo
 
-[Demo](https://docs.kiyotd.com/inview-active/demo/)  
+[Demo](https://prjtest.com/kiyotd/inview-active/demo/)  
 Make sure the active class is assigned.
 
 ## Installation
@@ -33,7 +31,7 @@ yarn add @kiyotd/inview-active
 #### v1.1.0
 
 ```shell
-<script src="https://unpkg.com/@kiyotd/inview-active@1.2.2/dist/browser.min.js"></script>
+<script src="https://unpkg.com/@kiyotd/inview-active@1.2.4/dist/browser.min.js"></script>
 ````
 
 ## Examples
@@ -41,9 +39,9 @@ yarn add @kiyotd/inview-active
 ### in JavaScript
 
 ```javascript
-import { ScrollToggleActiveClass } from "@kiyotd/inview-active";
+import { InviewActive } from "@kiyotd/inview-active";
 
-new ScrollToggleActiveClass({
+new InviewActive({
   selectors: ['[data-active-target]', '.any-class-name'],
   rootMargin: "0px 0px -200px 0px",
   activeClassName: 'active',
@@ -66,7 +64,7 @@ new ScrollToggleActiveClass({
 
 <script>
   window.addEventListener('DOMContentLoaded', () => {
-    new ScrollToggleActiveClass({
+    new InviewActive({
       selectors: ['.box1', '.box2'],
       rootMargin: "0px 0px -200px 0px",
       activeClassName: 'active',
@@ -86,7 +84,7 @@ new ScrollToggleActiveClass({
 <div class="box2">7</div>
 <div class="box2">8</div>
 
-<script src="https://unpkg.com/@kiyotd/inview-active@1.2.2/dist/browser.min.js"></script>
+<script src="https://unpkg.com/@kiyotd/inview-active@1.2.4/dist/browser.min.js"></script>
 </body>
 ```
 

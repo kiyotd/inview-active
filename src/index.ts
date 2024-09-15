@@ -1,5 +1,5 @@
-import { ScrollToggleActiveClass } from "./ScrollToggleActiveClass";
+import { InviewActive } from "./InviewActive";
 
-export { ScrollToggleActiveClass };
+export { InviewActive };
 
-(window as any).ScrollToggleActiveClass = ScrollToggleActiveClass;
+(window as any).InviewActive = InviewActive;
