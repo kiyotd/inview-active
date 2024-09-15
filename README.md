@@ -31,7 +31,7 @@ yarn add @kiyotd/inview-active
 #### v1.1.0
 
 ```shell
-<script src="https://unpkg.com/@kiyotd/inview-active@1.2.4/dist/browser.min.js"></script>
+<script src="https://unpkg.com/@kiyotd/inview-active@1.2.5/dist/browser.min.js"></script>
 ````
 
 ## Examples
@@ -84,7 +84,7 @@ new InviewActive({
 <div class="box2">7</div>
 <div class="box2">8</div>
 
-<script src="https://unpkg.com/@kiyotd/inview-active@1.2.4/dist/browser.min.js"></script>
+<script src="https://unpkg.com/@kiyotd/inview-active@1.2.5/dist/browser.min.js"></script>
 </body>
 ```
 
