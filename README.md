@@ -1,16 +1,14 @@
-# README
+# InviewActive
 
-This is a JavaScript utility.
+A JavaScript utility library that adds and removes classes to elements based on scrolling.
 
-Scroll the screen and when the specified element
-
-- When the specified element enters the screen, the `active` class is added.
-- When the element goes out of the screen, the `active` class is removed.
+- When a specified element enters the viewport, an `active` class (default) is added
+- When the element leaves the viewport, the `active` class is removed (configurable)
 
 ## Demo
 
-[Demo](https://prjtest.com/kiyotd/inview-active/demo/)  
-Make sure the active class is assigned.
+[Demo Page](https://prjtest.com/kiyotd/inview-active/demo/)
+Scroll to see elements fade in as the `active` class is applied.
 
 ## Installation
 
@@ -26,17 +24,15 @@ npm i @kiyotd/inview-active
 yarn add @kiyotd/inview-active
 ```
 
-### from CDN
+### Use from CDN
 
-#### v1.1.0
-
-```shell
+```html
 <script src="https://unpkg.com/@kiyotd/inview-active@1.2.5/dist/browser.min.js"></script>
-````
+```
 
-## Examples
+## Usage Examples
 
-### in JavaScript
+### JavaScript Example
 
 ```javascript
 import { InviewActive } from "@kiyotd/inview-active";
@@ -52,16 +48,15 @@ new InviewActive({
 ```
 
 ```html
-<div data-active-target>Selector for any data attribute</div>
-<div data-active-target>Selector for any data attribute</div>
-<div data-active-target>Selector for any data attribute</div>
-<div class="any-class-name">Selector by class name</div>
+<div data-active-target>Selector using data attribute</div>
+<div data-active-target>Selector using data attribute</div>
+<div data-active-target>Selector using data attribute</div>
+<div class="any-class-name">Selector using class name</div>
 ```
 
-### CDN
+### CDN Example
 
 ```html
-
 <script>
   window.addEventListener('DOMContentLoaded', () => {
     new InviewActive({
@@ -85,47 +80,88 @@ new InviewActive({
 <div class="box2">8</div>
 
 <script src="https://unpkg.com/@kiyotd/inview-active@1.2.5/dist/browser.min.js"></script>
-</body>
+```
+
+### CSS Example
+
+```css
+.box {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.box.active {
+  opacity: 1;
+}
 ```
 
 ## Options
 
-### selectors
+| Option Name | Type | Description | Default Value |
+|------------|-----|------|------------|
+| selectors | string[] | Array of selectors (required) | - |
+| rootMargin | string | Margin around the root intersection boundary | "0px 0px 0px 0px" |
+| activeClassName | string | Class name to add when element enters viewport | "active" |
+| inActive | boolean | Whether to add a class when element leaves viewport | false |
+| inActiveClassName | string | Class name to add when element leaves viewport | "in-active" |
+| once | boolean | Whether to keep the class after element leaves viewport | false |
+
+### selectors Option
 
 `string[]`
-Array of selector strings. required.
+An array of selector strings. This is a required parameter.
+You can specify any format that can be retrieved with querySelectorAll, such as class names (`.box`) or data attributes (`[data-active-target]`).
 
-[//]: # (### offset)
-
-[//]: # ()
-[//]: # (`number`)
-
-[//]: # (Offset from the top of the screen. Default: 0)
-
-### rootMargin
-
-`string` The IntersectionObserver interface's read-only rootMargin property is a string with syntax similar to that of the CSS margin property. Each side of the rectangle represented by rootMargin is added to the corresponding side in the root element's bounding box before the intersection test is performed. This lets you, for example, adjust the bounds outward so that the target element is considered 100% visible even if a certain number of pixels worth of width or height is clipped away, or treat the target as partially hidden if an edge is too close to the edge of the root's bounding box.
-
-Default: '0px 0px 0px 0px'
-
-https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin
-
-### activeClassName
+### rootMargin Option
 
 `string`
-Class name to be given once inside the screen. Default: 'active'
+Specified in the same format as the rootMargin property of IntersectionObserver.
+Uses syntax similar to the CSS margin property to specify the margin around the intersection boundary.
+For example, specifying "0px 0px -200px 0px" will detect intersection 200px above the bottom edge of the viewport.
 
-### inActive
+For more details, see [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/rootMargin).
 
-`boolean`
-Add a class when it is outside the screen. Default: false
-
-### inActiveClassName
+### activeClassName Option
 
 `string`
-Class name to be given once outside the screen. Default: 'in-active'
+The class name to add when an element enters the viewport. Default is "active".
 
-### once
+### inActive Option
 
 `boolean`
-Off-screen does not remove class. Default: false
+Specifies whether to add a class when an element leaves the viewport. Default is false.
+
+### inActiveClassName Option
+
+`string`
+The class name to add when an element leaves the viewport. Default is "in-active".
+This is only effective when the inActive option is true.
+
+### once Option
+
+`boolean`
+Specifies whether to maintain the class after an element leaves the viewport. Default is false.
+When set to true, the active class will not be removed after the element has entered the viewport once and then leaves.
+
+## How It Works
+
+This library uses the IntersectionObserver API to detect element visibility.
+It monitors elements that match the specified selectors and adds or removes classes when they enter or leave the viewport.
+
+## Browser Compatibility
+
+Works in modern browsers that support the IntersectionObserver API:
+- Chrome 51+
+- Firefox 55+
+- Safari 12.1+
+- Edge 15+
+
+For older browsers, consider using the [Intersection Observer polyfill](https://github.com/w3c/IntersectionObserver/tree/main/polyfill).
+
+## License
+
+MIT
+
+## Author
+
+[kiyotd](https://twitter.com/_kiyotd)
