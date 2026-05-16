@@ -2,4 +2,10 @@ import { InviewActive } from "./InviewActive";
 
 export { InviewActive };
 
-(window as any).InviewActive = InviewActive;
+declare global {
+  interface Window {
+    InviewActive: typeof InviewActive;
+  }
+}
+
+window.InviewActive = InviewActive;
